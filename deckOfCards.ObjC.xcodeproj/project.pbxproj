@@ -7,28 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34387D90234BBA900092C31A /* MOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34387D8F234BBA900092C31A /* MOViewController.m */; };
 		34B455AA234B9B7A00499AF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B455A9234B9B7A00499AF0 /* AppDelegate.m */; };
 		34B455AD234B9B7A00499AF0 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B455AC234B9B7A00499AF0 /* SceneDelegate.m */; };
-		34B455B0234B9B7A00499AF0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B455AF234B9B7A00499AF0 /* ViewController.m */; };
 		34B455B3234B9B7A00499AF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34B455B1234B9B7A00499AF0 /* Main.storyboard */; };
 		34B455B5234B9B7A00499AF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34B455B4234B9B7A00499AF0 /* Assets.xcassets */; };
 		34B455B8234B9B7A00499AF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34B455B6234B9B7A00499AF0 /* LaunchScreen.storyboard */; };
 		34B455BB234B9B7A00499AF0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B455BA234B9B7A00499AF0 /* main.m */; };
+		34B455C8234B9EB200499AF0 /* MOCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B455C7234B9EB200499AF0 /* MOCard.m */; };
+		34B455CB234BA58F00499AF0 /* MOCardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B455CA234BA58F00499AF0 /* MOCardController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34387D8E234BBA900092C31A /* MOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MOViewController.h; sourceTree = "<group>"; };
+		34387D8F234BBA900092C31A /* MOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MOViewController.m; sourceTree = "<group>"; };
 		34B455A5234B9B7A00499AF0 /* deckOfCards.ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = deckOfCards.ObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34B455A8234B9B7A00499AF0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		34B455A9234B9B7A00499AF0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		34B455AB234B9B7A00499AF0 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		34B455AC234B9B7A00499AF0 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		34B455AE234B9B7A00499AF0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		34B455AF234B9B7A00499AF0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		34B455B2234B9B7A00499AF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		34B455B4234B9B7A00499AF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34B455B7234B9B7A00499AF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34B455B9234B9B7A00499AF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34B455BA234B9B7A00499AF0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		34B455C6234B9EB200499AF0 /* MOCard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MOCard.h; sourceTree = "<group>"; };
+		34B455C7234B9EB200499AF0 /* MOCard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MOCard.m; sourceTree = "<group>"; };
+		34B455C9234BA58F00499AF0 /* MOCardController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MOCardController.h; sourceTree = "<group>"; };
+		34B455CA234BA58F00499AF0 /* MOCardController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MOCardController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,19 +67,63 @@
 		34B455A7234B9B7A00499AF0 /* deckOfCards.ObjC */ = {
 			isa = PBXGroup;
 			children = (
+				34B455C5234B9C8400499AF0 /* resources */,
+				34B455C2234B9C6300499AF0 /* controllers */,
+				34B455C1234B9C5100499AF0 /* model */,
+				34B455B1234B9B7A00499AF0 /* Main.storyboard */,
+				34B455BA234B9B7A00499AF0 /* main.m */,
+			);
+			path = deckOfCards.ObjC;
+			sourceTree = "<group>";
+		};
+		34B455C1234B9C5100499AF0 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				34B455C6234B9EB200499AF0 /* MOCard.h */,
+				34B455C7234B9EB200499AF0 /* MOCard.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		34B455C2234B9C6300499AF0 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				34B455C4234B9C7800499AF0 /* view controller */,
+				34B455C3234B9C6C00499AF0 /* model controller */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		34B455C3234B9C6C00499AF0 /* model controller */ = {
+			isa = PBXGroup;
+			children = (
+				34B455C9234BA58F00499AF0 /* MOCardController.h */,
+				34B455CA234BA58F00499AF0 /* MOCardController.m */,
+			);
+			path = "model controller";
+			sourceTree = "<group>";
+		};
+		34B455C4234B9C7800499AF0 /* view controller */ = {
+			isa = PBXGroup;
+			children = (
+				34387D8E234BBA900092C31A /* MOViewController.h */,
+				34387D8F234BBA900092C31A /* MOViewController.m */,
+			);
+			path = "view controller";
+			sourceTree = "<group>";
+		};
+		34B455C5234B9C8400499AF0 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				34B455B4234B9B7A00499AF0 /* Assets.xcassets */,
+				34B455B6234B9B7A00499AF0 /* LaunchScreen.storyboard */,
+				34B455B9234B9B7A00499AF0 /* Info.plist */,
 				34B455A8234B9B7A00499AF0 /* AppDelegate.h */,
 				34B455A9234B9B7A00499AF0 /* AppDelegate.m */,
 				34B455AB234B9B7A00499AF0 /* SceneDelegate.h */,
 				34B455AC234B9B7A00499AF0 /* SceneDelegate.m */,
-				34B455AE234B9B7A00499AF0 /* ViewController.h */,
-				34B455AF234B9B7A00499AF0 /* ViewController.m */,
-				34B455B1234B9B7A00499AF0 /* Main.storyboard */,
-				34B455B4234B9B7A00499AF0 /* Assets.xcassets */,
-				34B455B6234B9B7A00499AF0 /* LaunchScreen.storyboard */,
-				34B455B9234B9B7A00499AF0 /* Info.plist */,
-				34B455BA234B9B7A00499AF0 /* main.m */,
 			);
-			path = deckOfCards.ObjC;
+			path = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +152,7 @@
 		34B4559D234B9B7900499AF0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MO;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Matthew O'Connor";
 				TargetAttributes = {
@@ -146,9 +197,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34B455B0234B9B7A00499AF0 /* ViewController.m in Sources */,
+				34B455C8234B9EB200499AF0 /* MOCard.m in Sources */,
 				34B455AA234B9B7A00499AF0 /* AppDelegate.m in Sources */,
+				34B455CB234BA58F00499AF0 /* MOCardController.m in Sources */,
 				34B455BB234B9B7A00499AF0 /* main.m in Sources */,
+				34387D90234BBA900092C31A /* MOViewController.m in Sources */,
 				34B455AD234B9B7A00499AF0 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +344,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RRGZ3XLFVN;
-				INFOPLIST_FILE = deckOfCards.ObjC/Info.plist;
+				INFOPLIST_FILE = deckOfCards.ObjC/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +361,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RRGZ3XLFVN;
-				INFOPLIST_FILE = deckOfCards.ObjC/Info.plist;
+				INFOPLIST_FILE = deckOfCards.ObjC/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
