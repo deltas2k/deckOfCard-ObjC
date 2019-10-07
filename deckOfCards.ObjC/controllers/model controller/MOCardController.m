@@ -10,20 +10,28 @@
 
 @implementation MOCardController
 
+/// + defines this as a class method, similar to a static func
+/// return with our card controller
+/// * pointer in memory for our card controller
+/// sharedController is our internal parameter name
 +(MOCardController *)sharedController
 {
+    ///make sure our sharedController doesn't exist
     static MOCardController * sharedController = nil;
+    /// create a once token to keep track of how many times this function has been run, this is done on the dispatch once thread
     static dispatch_once_t onceToken;
+    /// method that takes in our once from above and runs a completion to allocate and initialize a MOCardController
     dispatch_once(&onceToken, ^{
         sharedController = [MOCardController new];
     });
     return sharedController;
 }
-
+/// defines a constant for our baseURL with a string literal
 static NSString * const baseURLString = @"https://deckofcardsapi.com/api/deck/new";
 
 -(void)drawNewCard:(NSInteger)numberOfCards completion:(void (^)(NSArray<MOCard *> *))completion
 {
+    /// defines variable for our url, uses bracket syntax versus dot syntax
     NSURL * url = [NSURL URLWithString:baseURLString];
     NSString * cardCount = [@(numberOfCards) stringValue];
     NSURL * drawURL = [url URLByAppendingPathComponent:@"draw/"];
@@ -46,14 +54,18 @@ static NSString * const baseURLString = @"https://deckofcardsapi.com/api/deck/ne
         }
         if (data)
         {
+            /// defining variable and allocating in memory for our topLevelDictionary, calling our JSONSerialization method with get an object with data, 2 represents "allow fragments" for our reading options "&error'" refers to the same spot in memory as error from data task
             NSDictionary * topLevelDictionary = [NSJSONSerialization JSONObjectWithData:data options:2 error:&error];
+            /// if you cannot get a dictionary out of the data
             if (!topLevelDictionary)
             {
                 NSLog(@"error parsing the JSON %@", error);
                 completion(nil);
                 return;
             }
+            ///define a variable of type NSArray at the key "cards" from our top level dictionary
             NSArray * cardsArray = topLevelDictionary[@"cards"];
+            /// defining a placeholder variable that is declared as mutable that we can later append to it
             NSMutableArray * cardPlaceholder = [NSMutableArray new];
             
             for (NSDictionary * dictionary in cardsArray)

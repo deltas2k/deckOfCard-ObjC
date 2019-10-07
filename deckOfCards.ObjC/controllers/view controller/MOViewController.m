@@ -22,8 +22,10 @@
 }
 
 - (IBAction)buttonClicked:(UIButton *)sender {
+    /// calling our draw card fuction on our shared instance, we added an internal name for the array that we completed with and used that array to fetch an image by passing in the first card in the array to our fetch image method. (after pointers)
     [MOCardController.sharedController drawNewCard:1 completion:^(NSArray<MOCard *> * cardArray) {
         [MOCardController.sharedController fetchImageFromCard:cardArray[0] completion:^(UIImage * image) {
+            /// same as dispatchqueue.main.async
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.imageView.image = image;
                 MOCard * card = cardArray[0];
